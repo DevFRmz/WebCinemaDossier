@@ -98,8 +98,8 @@ header {
     transition: color .3s;
 }
 
-.nav-header a:hover,
-.nav-header a:focus {
+.nav-header a:hover, 
+.nav-header .active {
     color: var(--metallic-gold);
 }
 
