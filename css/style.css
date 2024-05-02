@@ -13,6 +13,7 @@
 
 html {
     font-size: 62.5%;
+    box-sizing: border-box;
 }
 
 body {
@@ -52,12 +53,12 @@ img {
 
 .container{
     max-width: 100rem;
-    margin: 0 auto 10rem auto;
+    margin: 0 auto 7rem auto;
 }
 
 /** header **/
 header {
-    position: fixed; /* O 'absolute' si no necesitas que sea fijo */
+    position: absolute; /* O 'fixed' si necesitas que sea fijo */
     width: 100%;
     background: transparent; /* Hace el fondo del header transparente */
     z-index: 1000; /* Asegura que el header se mantenga sobre .hero */
@@ -213,12 +214,27 @@ header {
 
 
 /* main */
+.titulo-main {
+    text-align: center;
+}
+
 .peliculas{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 }
 
+.pelicula {
+    transition: transform .3s;
+}
+
+.pelicula:hover {
+    transform: scale(.8);
+}
+
+.pelicula img{
+    border-radius: 2rem;
+}
 
 /* footer */
 .footer {
@@ -230,7 +246,6 @@ header {
 
 .footer-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around; /* Distribución equitativa de las secciones */
     margin: 0 auto; /* Centra el contenido del footer dentro de un máximo de 1200px */
 }
@@ -256,8 +271,12 @@ header {
     line-height: 1.6; /* Espacio vertical entre líneas de texto */
 }
 
+.footer-section a {
+    transition: color .3s;
+}
+
 .footer-section a:hover {
-    text-decoration: underline; /* Subraya los enlaces al pasar el ratón para mejorar la interacción */
+    color: var(--metallic-gold);
 }
 
 .social-icons a {

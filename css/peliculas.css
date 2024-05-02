@@ -1,0 +1,39 @@
+:root {
+    --deep-navy: #011329;
+    /* Azul Marino Profundo para fondos */
+    --sky-blue: #7AB6D9;
+    /* Azul Cielo Claro para detalles y enlaces */
+    --pearl-gray: #D9E1E8;
+    /* Gris Perla para fondos secundarios y texto no primario */
+    --white: #FFFFFF;
+    /* Blanco para texto y elementos que necesiten alto contraste */
+    --metallic-gold: #D4AF37;
+    /* Oro Metálico para encabezados y elementos destacados */
+}
+
+.main-peliculas {
+    margin-top: 15rem;
+    padding: 5rem 0 15rem 0;
+}
+
+.titulo-main-peliculas {
+    text-align: center;
+}
+
+.pelicula:hover {
+    transform: none;
+}
+
+.swiper {
+    width: 100%;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 25rem;
+}
+
+.swiper-slide img{
+    width: 100%;
+}

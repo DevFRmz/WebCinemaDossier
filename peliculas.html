@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CinémaDossier - peliculas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- libreria de swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/peliculas.css">
 </head>
 <body>
     <header >
@@ -39,6 +41,44 @@
         </div>
     </header>
         
+    <main class="main-peliculas container">
+        <h2 class="titulo-main-peliculas">Peliculas Populares Esta Semana</h2>
+
+        <section class="peliculas swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="pelicula swiper-slide">
+                    <img src="img/portadas/joker.jpg" alt="joker">
+                </div>
+                
+                <div class="pelicula swiper-slide">
+                    <img src="img/portadas/lobo-wallstreet.jpg" alt="lobo de wallstreet">
+                </div>
+                
+                <div class="pelicula swiper-slide">
+                    <img src="img/portadas/origen.jpg" alt="el origen">
+                </div>
+                
+                <div class="pelicula swiper-slide">
+                    <img src="img/portadas/spiderman-no-way-home.jpg" alt="spiderman no way home">
+                </div>
+                <div class="pelicula swiper-slide">
+                    <img src="img/portadas/joker.jpg" alt="joker">
+                </div>
+                
+                <div class="pelicula swiper-slide">
+                    <img src="img/portadas/lobo-wallstreet.jpg" alt="lobo de wallstreet">
+                </div>
+                
+                <div class="pelicula swiper-slide">
+                    <img src="img/portadas/origen.jpg" alt="el origen">
+                </div>
+                
+                <div class="pelicula swiper-slide">
+                    <img src="img/portadas/spiderman-no-way-home.jpg" alt="spiderman no way home">
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="container footer-container">
@@ -87,5 +127,8 @@
             <p>&copy; Cinema Dossier. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 </html>
