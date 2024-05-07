@@ -10,6 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
             depth: 300,
             slideShadows: true,
         },
-        loop: true
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }
     });
 });

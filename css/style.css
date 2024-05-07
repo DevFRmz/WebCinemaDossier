@@ -42,14 +42,23 @@ img {
 }
 /* components */
 .button, .call-to-action {
-    background-color: var(--metallic-gold);
-    color: var(--white);
-    font-family: 'Playfair Display', serif;
-    font-size: 1.6rem;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
+    background-color: var(--metallic-gold); /* Fondo dorado metálico */
+    color: var(--white); /* Texto blanco */
+    font-family: 'Playfair Display', serif; /* Fuente elegante para el botón */
+    font-size: 1.6rem; /* Tamaño de la fuente */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin bordes */
+    cursor: pointer; /* Cursor de mano para indicar que es clickeable */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Transiciones suaves para efectos */
 }
+
+.button:hover, .call-to-action:hover {
+    background-color: var(--sky-blue); /* Cambio a azul cielo claro para el hover */
+    color: var(--deep-navy); /* Texto en azul marino profundo para contraste */
+    transform: scale(1.05); /* Aumento ligero del tamaño para efecto visual */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar sensación de elevación */
+}
+
 
 .container{
     max-width: 100rem;
@@ -137,7 +146,7 @@ header {
     padding: 6px 30px 6px 10px;
     width: 100%;
     border-radius: 1.5rem;
-    height: 3rem;
+    height: 3.5rem;
     border: none;
     color: var(--white);
 }
@@ -162,7 +171,7 @@ header {
     border: none;
     background: none;
     cursor: pointer;
-    padding: 8px;
+    padding: .8rem;
     margin: 0;
     outline: none; /* Elimina el borde cuando se enfoca el botón */
 }
