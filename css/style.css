@@ -241,6 +241,12 @@ header {
     transform: scale(.8);
 }
 
+.pelicula p {
+    text-align: center;
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
 .pelicula img{
     border-radius: 2rem;
 }

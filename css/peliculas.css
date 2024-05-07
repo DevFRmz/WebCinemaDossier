@@ -56,6 +56,8 @@
 
 .filter-button {
     border-radius: 2rem;
+    text-decoration: none;
+    display: block;
 }
 
 .filter-options {
@@ -90,7 +92,35 @@
 }
 
 
-
+.peliculas-filtradas {
+    display: block;
+}
 .peliculas-filtradas h2 {
     color: var(--white);
+    
+}
+
+/* para info-pelicula.php */
+.info-pelicula {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5rem;
+}
+
+.info-pelicula img{
+    border-radius: 2rem;
+    height: 100%;
+    object-fit: cover;
+}
+
+.texto-pelicula {
+    color: var(--white);
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.texto-pelicula span {
+    color: var(--metallic-gold);
 }

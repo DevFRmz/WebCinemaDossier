@@ -18,7 +18,7 @@
         <div class="header-grid container">
             <div class="logo-img">
                 <a href="index.php">
-                    <img src="./img/logo3.png" alt="logo">
+                    <img src="./img/logo.png" alt="logo">
                 </a>
             </div>
 
@@ -33,7 +33,7 @@
                 <div class="search-box">
                     <input class="search-input" type="search" name="q" placeholder="Buscar..." aria-label="Buscar">
                     <button type="submit" class="search-button">
-                        <img src="./img/icon-search.svg" alt="Buscar" />
+                        <img src="./img/icons/icon-search.svg" alt="Buscar" />
                     </button>
                 </div>
             </form>
