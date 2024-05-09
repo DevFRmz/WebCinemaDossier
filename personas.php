@@ -99,9 +99,9 @@ if ( isset($_GET['filtro']) && $_GET['filtro'] == 'todas' ) {
                 <h3>NO hay personas para este filtro</h3>
             <?php endif ?>
 
-            <div class="peliculas">
+            <div class="personas">
                 <?php foreach ($personas as $persona): ?>
-                    <div class="pelicula">
+                    <div class="persona">
                         <a href="info-persona.php?id_persona=<?= $persona["id_persona"] ?>">
                             <?php if($persona["ruta_imagen"]): ?>
                                 <img src="./img/personas/<?= $persona["ruta_imagen"] ?>" alt="<?= $persona["nombre_artistico"] ?>">

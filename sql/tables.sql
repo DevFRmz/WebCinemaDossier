@@ -10,7 +10,8 @@ CREATE TABLE persona(
 	ano_inicio_carrera INT NOT NULL,
 	anos_trabajando INT NOT NULL,
 	estado VARCHAR(10) NOT NULL,
-	ruta_imagen VARCHAR(100)
+	ruta_imagen VARCHAR(100),
+
 	CHECK (sexo IN ('F', 'M')),
 	CHECK (estado IN ('activo', 'retirado', 'fallecido'))
 );
@@ -81,3 +82,29 @@ CREATE TABLE jurado(
 	FOREIGN KEY (id_edicion) REFERENCES edicion_gala (id_edicion),
 	FOREIGN KEY (id_persona) REFERENCES persona (id_persona)
 );
+
+CREATE TABLE users (
+    id_user INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE favoritos_peliculas (
+    id_favorito_pelicula INT AUTO_INCREMENT PRIMARY KEY,
+    id_user INT NOT NULL,
+    id_pelicula INT NOT NULL,
+    FOREIGN KEY (id_user) REFERENCES users (id_user),
+    FOREIGN KEY (id_pelicula) REFERENCES pelicula (id_pelicula),
+    UNIQUE KEY unique_favorito_pelicula (id_user, id_pelicula)
+);
+
+CREATE TABLE favoritos_personas (
+    id_favorito_persona INT AUTO_INCREMENT PRIMARY KEY,
+    id_user INT NOT NULL,
+    id_persona INT NOT NULL,
+    FOREIGN KEY (id_user) REFERENCES users (id_user),
+    FOREIGN KEY (id_persona) REFERENCES persona (id_persona),
+    UNIQUE KEY unique_favorito_persona (id_user, id_persona)
+);
+

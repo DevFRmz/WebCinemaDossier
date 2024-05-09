@@ -1,3 +1,11 @@
+<?php
+
+require "database.php";
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +34,14 @@
                 <a href="peliculas.php">PELICULAS</a>
                 <a href="personas.php">PERSONAS</a>
                 <a href="galas-premios.php">GALAS Y PREMIOS</a>
-                <a href="sobre-nosotros.php">SOBRE NOSOTROS</a>
+                <?php if (!isset($_SESSION["user"])): ?>
+                    <a href="/cinema_dossier/sesion.php">INICIAR SESION</a>
+                <?php endif ?>
+                
+                <?php if (isset($_SESSION["user"])): ?>
+                    <a href="/cinema_dossier/favoritos.php?<?= $_SESSION["user"]["id_user"] ?>">FAVORITOS</a>
+                    <a href="/cinema_dossier/partials/logout.php">CERRAR SESION</a>
+                <?php endif ?>
             </nav>
             
             <form action="/buscar" method="GET" class="search-form">

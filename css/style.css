@@ -50,6 +50,8 @@ img {
     border: none; /* Sin bordes */
     cursor: pointer; /* Cursor de mano para indicar que es clickeable */
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Transiciones suaves para efectos */
+    border-radius: 2rem;
+    text-align: center;
 }
 
 .button:hover, .call-to-action:hover {
@@ -227,27 +229,29 @@ header {
     text-align: center;
 }
 
-.peliculas{
+.peliculas, .personas{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    gap: 2rem;
 }
 
-.pelicula {
+.pelicula, .persona{
     transition: transform .3s;
+    display: flex;
+    flex-direction: column;
 }
 
-.pelicula:hover {
+.pelicula:hover, .persona:hover {
     transform: scale(.8);
 }
 
-.pelicula p {
+.pelicula p, .persona p {
     text-align: center;
     color: var(--white);
     font-size: 1.5rem;
 }
 
-.pelicula img{
+.pelicula img, .persona img{
     border-radius: 2rem;
 }
 
