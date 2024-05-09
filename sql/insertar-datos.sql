@@ -1,10 +1,10 @@
-INSERT INTO persona (nombre_artistico, nombre_real, sexo, ano_nacimiento, pagina_web, ano_inicio_carrera, anos_trabajando, estado)
+INSERT INTO persona (nombre_artistico, nombre_real, sexo, ano_nacimiento, pagina_web, ano_inicio_carrera, anos_trabajando, estado, ruta_imagen)
 VALUES
-('Tom Hanks', 'Thomas Jeffrey Hanks', 'M', 1956, 'http://tomhanks.com', 1980, 42, 'activo'),
-('Meryl Streep', 'Mary Louise Streep', 'F', 1949, 'http://merylstreep.com', 1971, 51, 'activo'),
-('Leonardo DiCaprio', 'Leonardo Wilhelm DiCaprio', 'M', 1974, 'http://leonardodicaprio.com', 1989, 33, 'activo'),
-('Scarlett Johansson', 'Scarlett Ingrid Johansson', 'F', 1984, 'http://scarlettjohansson.com', 1994, 28, 'activo'),
-('Denzel Washington', 'Denzel Hayes Washington Jr.', 'M', 1954, NULL, 1975, 47, 'activo');
+('Tom Hanks', 'Thomas Jeffrey Hanks', 'M', 1956, 'http://tomhanks.com', 1980, 42, 'activo', 'tom-hanks.png'),
+('Meryl Streep', 'Mary Louise Streep', 'F', 1949, 'http://merylstreep.com', 1971, 51, 'activo', 'meryl-streep.png'),
+('Leonardo DiCaprio', 'Leonardo Wilhelm DiCaprio', 'M', 1974, 'http://leonardodicaprio.com', 1989, 33, 'activo', 'leonardo-dicaprio.png'),
+('Scarlett Johansson', 'Scarlett Ingrid Johansson', 'F', 1984, 'http://scarlettjohansson.com', 1994, 28, 'activo', 'scarlett-johansson.png'),
+('Denzel Washington', 'Denzel Hayes Washington Jr.', 'M', 1954, NULL, 1975, 47, 'activo', 'denzel-washington.png');
 
 INSERT INTO pelicula (titulo_original, titulo_espanol, ano_produccion, nacionalidad, idioma_original, genero, lugar_estreno, sala_exposicion, recaudacion_primer_ano, recaudacion_total, ruta_imagen)
 VALUES
