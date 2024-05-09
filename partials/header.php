@@ -20,6 +20,7 @@ session_start();
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/peliculas.css">
+    <link rel="stylesheet" href="css/galas-premios.css">
 </head>
 <body>
     <header >
