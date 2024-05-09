@@ -4,6 +4,7 @@ require "database.php";
 
 session_start();
 
+
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +46,7 @@ session_start();
                 <?php endif ?>
             </nav>
             
-            <form action="/buscar" method="GET" class="search-form">
+            <form action="search.php" class="search-form">
                 <div class="search-box">
                     <input class="search-input" type="search" name="q" placeholder="Buscar..." aria-label="Buscar">
                     <button type="submit" class="search-button">
