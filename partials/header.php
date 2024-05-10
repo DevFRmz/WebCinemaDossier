@@ -37,12 +37,12 @@ session_start();
                 <a href="personas.php">PERSONAS</a>
                 <a href="galas-premios.php">GALAS Y PREMIOS</a>
                 <?php if (!isset($_SESSION["user"])): ?>
-                    <a href="/cinema_dossier/sesion.php">INICIAR SESION</a>
+                    <a href="partials/login.php">INICIAR SESION</a>
                 <?php endif ?>
                 
                 <?php if (isset($_SESSION["user"])): ?>
-                    <a href="/cinema_dossier/favoritos.php?<?= $_SESSION["user"]["id_user"] ?>">FAVORITOS</a>
-                    <a href="/cinema_dossier/partials/logout.php">CERRAR SESION</a>
+                    <a href="../favoritos.php?<?= $_SESSION["user"]["id_user"] ?>">FAVORITOS</a>
+                    <a href="partials/logout.php">CERRAR SESION</a>
                 <?php endif ?>
             </nav>
             
