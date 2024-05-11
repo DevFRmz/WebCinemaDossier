@@ -30,7 +30,7 @@ session_start();
         <div class="header-grid container">
             <div class="logo-img">
                 <a href="index.php">
-                    <img src="./img/logo.png" alt="logo">
+                    <img src="img/logo.png" alt="logo">
                 </a>
             </div>
 
@@ -43,7 +43,7 @@ session_start();
                 <?php endif ?>
                 
                 <?php if (isset($_SESSION["user"])): ?>
-                    <a href="../favoritos.php?<?= $_SESSION["user"]["id_user"] ?>">FAVORITOS</a>
+                    <a href="favoritos.php?<?= $_SESSION["user"]["id_user"] ?>">FAVORITOS</a>
                     <a href="partials/logout.php">CERRAR SESION</a>
                 <?php endif ?>
             </nav>
