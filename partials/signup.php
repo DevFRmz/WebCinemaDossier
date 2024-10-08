@@ -4,6 +4,8 @@ require "../database.php";
 
 $error = null;
 
+var_dump($_POST);
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["signup_submit"])) {
     if (empty($_POST["name"] || empty($_POST["email"]) || empty($_POST["password"]))) {
         $error = "Please fill all the fields";
@@ -17,16 +19,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["signup_submit"])) {
         if ($statement->rowCount() > 0) {
             $error = "email already exist";
         } else {
+            echo "<h1>Entre</h1>";
             $conn
-                //LIMITAMOS la consulta a 1 para que al hacer el fetch del usuario solo nos devuelva un array con un elemento y poder acceder a el directamente sin utilizar indice
-                ->prepare("INSERT INTO users (name, email, password) VALUES(:name, :email, :password) LIMIT 1")
+                ->prepare("INSERT INTO users (name, email, password) VALUES(:name, :email, :password)")
                 ->execute([
                     ":name" => $_POST["name"],
                     ":email" => $_POST["email"],
                     ":password" => password_hash($_POST["password"], PASSWORD_BCRYPT)
                 ]);
             //volvemos a recuperar los datos con el nuevo usuario en la base de datos
-            $statement = $conn->prepare("SELECT * FROM users WHERE email = :email");
+            //LIMITAMOS la consulta a 1 para que al hacer el fetch del usuario solo nos devuelva un array con un elemento y poder acceder a el directamente sin utilizar indice
+            $statement = $conn->prepare("SELECT * FROM users WHERE email = :email LIMIT 1");
             $statement->bindParam(":email", $_POST["email"]);
             $statement->execute();
             //obtener datos del usuario en formato array asociativo

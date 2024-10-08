@@ -2,7 +2,7 @@
 $host = "localhost";
 $database = "cinema_dossier";
 $user = "root";
-$password = "";
+$password = "FelipeRmz082001.";
 
 try {
 

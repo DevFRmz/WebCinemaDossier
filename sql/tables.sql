@@ -1,5 +1,7 @@
 CREATE DATABASE IF NOT EXISTS cinema_dossier;
 
+USE cinema_dossier;
+
 CREATE TABLE persona(
 	id_persona INT AUTO_INCREMENT PRIMARY KEY,
 	nombre_artistico VARCHAR(100),
